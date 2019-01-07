@@ -1,0 +1,109 @@
+@import '../../@theme/styles/themes';
+@import '~bootstrap/scss/mixins/breakpoints';
+@import '~@nebular/theme/styles/global/breakpoints';
+
+$shadow-green: #00977e;
+
+@include nb-install-component() {
+  .solar-card nb-card-header {
+    border: none;
+    padding-bottom: 0;
+  }
+
+  @include media-breakpoint-down(sm) {
+    ngx-traffic {
+      display: none;
+    }
+  }
+
+  @include media-breakpoint-down(is) {
+    /deep/ nb-card.large-card {
+      height: nb-theme(card-height-medium);
+    }
+  }
+
+
+  .progress-info {
+    color: nb-theme(color-fg-heading);
+    margin-top: 2.5rem;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  .title {
+    font-family: nb-theme(font-secondary);
+    font-size: nb-theme(font-size-lg);
+    font-weight: nb-theme(font-weight-bold);
+  }
+
+  .value {
+    font-size: 3rem;
+    font-weight: nb-theme(font-weight-light);
+    margin-top: 0.5rem;
+  }
+
+  .description {
+    color: nb-theme(color-fg);
+    margin-top: 0.5rem;
+  }
+
+  /deep/ nb-progress-bar {
+    margin-top: 0.2rem;
+
+    .progress-container {
+      height: 0.8rem;
+      border-radius: 0;
+    }
+
+    .progress-value {
+      height: 0.6rem;
+      background: nb-theme(progress-bar-background);
+
+      @include nb-for-theme(cosmic) {
+        box-shadow: 0 0.2rem $shadow-green;
+      }
+
+      @include nb-for-theme(corporate) {
+        height: 100%;
+      }
+    }
+  }
+
+  .ng2-smart-action-delete-delete:hover{
+    color: #ff386a;
+  }
+  .ng2-smart-action-edit-edit:hover{
+    color: #00d977;
+  }
+
+  .nb-trash{
+    font-family: nebular;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  a.ng2-smart-action:hover {
+    text-decoration: none;
+  }
+  a.ng2-smart-action {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50%;
+    width: 100%;
+    font-size: 2rem !important;
+    color: #a1a1e5;
+  }
+
+  .input-danger {
+    border-color: #ff4c6a;
+  }
+}
