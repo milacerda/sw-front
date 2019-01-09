@@ -3,7 +3,7 @@
         <nb-card>
             <nb-card-header>Adicionar Planeta</nb-card-header>
             <nb-card-body>
-                <form [formGroup]="planetsForm" (ngSubmit)="newPlanet()">
+                <form [formGroup]="planetsForm" (ngSubmit)="editPlanet()">
                     <div class="form-group">
                         <label for="nome">Nome</label>
                         <input type="text" class="form-control" id="nome" placeholder="{{ planet ? planet.nome : '' }}" formControlName="nome"
