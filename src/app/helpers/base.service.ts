@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Headers, Response } from '@angular/http';
 import { Observable } from "rxjs/Observable";
-import { ErrorObservable } from "rxjs/Observable/ErrorObservable";
 
 import { AuthenticationService } from '../shared/authentication.service';
 import { BASIC_REQUEST_HEADERS, BASIC_UPLOAD_HEADERS } from '../app.config';
