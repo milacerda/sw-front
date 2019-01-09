@@ -7,7 +7,8 @@ export const BASIC_UPLOAD_HEADERS = {
     'Accept': 'application/json; charset=utf-8'
 }
 
-export const URL_BASE_REST: string = 'http://localhost/sw/public/';
+// export const URL_BASE_REST: string = 'http://localhost/sw/public/'; //Local
+export const URL_BASE_REST: string = 'https://api-sw.herokuapp.com/'; //Prod demo
 
 export const URL_VALIDATE_TOKEN: string = URL_BASE_REST + 'authentication/validate-auth-token';
 export const URL_LOGOUT: string = URL_BASE_REST + 'authentication/logout';
