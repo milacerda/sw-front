@@ -5,7 +5,7 @@ const path = require('path');
 const app = express();
 
 // Serve only the static files form the dist directory
-app.use(express.static(__dirname + '/dist/nebula-sw'));
+app.use(express.static('/dist/nebula-sw'));
 
 app.get('/*', function (req, res) {
 
