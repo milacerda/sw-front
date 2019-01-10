@@ -8,7 +8,7 @@ export const BASIC_UPLOAD_HEADERS = {
 }
 
 // export const URL_BASE_REST: string = 'http://localhost/sw/public/'; //Local
-export const URL_BASE_REST: string = 'https://api-sw.herokuapp.com/'; //Prod demo
+export const URL_BASE_REST: string = 'https://api-sw.herokuapp.com/api'; //Prod demo
 
 export const URL_VALIDATE_TOKEN: string = URL_BASE_REST + 'authentication/validate-auth-token';
 export const URL_LOGOUT: string = URL_BASE_REST + 'authentication/logout';
@@ -18,5 +18,5 @@ export const URL_RESET_REQUEST: string = URL_BASE_REST + 'authentication/forgot-
 export const URL_CHANGE_PASS: string = URL_BASE_REST + 'authentication/reset-password';
 export const URL_NEW_PASS: string = URL_BASE_REST + 'authentication/new-password';
 
-export const URL_PLANETS: string = URL_BASE_REST + 'api/planets';
+export const URL_PLANETS: string = URL_BASE_REST + 'planets';
 export const URL_USER: string = URL_BASE_REST + 'user';

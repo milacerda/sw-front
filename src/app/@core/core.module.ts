@@ -9,6 +9,7 @@ import { DataModule } from './data/data.module';
 import { AnalyticsService } from './utils/analytics.service';
 import { HttpResponse } from '@angular/common/http';
 import { getDeepFromObject } from '../helpers/helpers';
+import { URL_BASE_REST } from '../app.config';
 
 // const socialLinks = [
 //   {
@@ -46,7 +47,7 @@ export const NB_CORE_PROVIDERS = [
       // }),
       NbPasswordAuthStrategy.setup({
         name: 'email',
-        baseEndpoint: 'http://localhost/sw/public/api/',
+        baseEndpoint: URL_BASE_REST,
         token: {
           class: NbAuthSimpleToken,
           key: 'success', // this parameter tells where to look for the token
@@ -58,7 +59,7 @@ export const NB_CORE_PROVIDERS = [
           // ),
         },
         login: {
-          endpoint: 'login',
+          endpoint: '/login',
           method: 'post',
         },
       }),
