@@ -8,7 +8,7 @@ export const BASIC_UPLOAD_HEADERS = {
 }
 
 // export const URL_BASE_REST: string = 'http://localhost/sw/public/'; //Local
-export const URL_BASE_REST: string = 'https://api-sw.herokuapp.com/api'; //Prod demo
+export const URL_BASE_REST: string = 'https://api-sw.herokuapp.com/api/'; //Prod demo
 
 export const URL_VALIDATE_TOKEN: string = URL_BASE_REST + 'authentication/validate-auth-token';
 export const URL_LOGOUT: string = URL_BASE_REST + 'authentication/logout';

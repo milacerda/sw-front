@@ -59,7 +59,7 @@ export const NB_CORE_PROVIDERS = [
           // ),
         },
         login: {
-          endpoint: '/login',
+          endpoint: 'login',
           method: 'post',
         },
       }),
