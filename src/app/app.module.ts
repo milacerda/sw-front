@@ -18,7 +18,9 @@ import { AuthGuard } from './auth/auth-guard.service';
 import { PlanetsService } from './@core/data/planets.service';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [
+    AppComponent
+  ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,

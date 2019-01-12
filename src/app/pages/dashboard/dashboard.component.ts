@@ -5,6 +5,7 @@ import { Planets } from '../../shared/planets.module';
 import { PlanetsService } from '../../@core/data/planets.service';
 
 import { FormControl, FormGroup, Validators, FormBuilder } from '@angular/forms';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -29,8 +30,8 @@ export class DashboardComponent implements OnDestroy {
 
   constructor(
     private planetsService: PlanetsService,
-    private fb: FormBuilder) {
-  }
+    private fb: FormBuilder,
+    private router: Router) {}
 
 public getPlanets(){
   this.planetsService.getPlanets().subscribe(
@@ -66,6 +67,10 @@ public getPlanets(){
         this.getPlanets();
       }
     );
+  }
+
+  public editPlanet(id){
+    this.router.navigate(['/dashboard/edit/'+id]);
   }
 
   

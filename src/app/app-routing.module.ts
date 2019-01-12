@@ -9,12 +9,15 @@ import {
   NbResetPasswordComponent,
 } from '@nebular/auth';
 import { AuthGuard } from './auth/auth-guard.service';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { NgxLoginComponent } from './pages/login/login.component';
 
 const routes: Routes = [
-  { 
-    path: 'pages', 
+  // { path: '', loadChildren: 'app/pages/dashboard/dashboard.module#DashboardModule' },
+  {
+    path: '', 
     canActivate: [AuthGuard], // here we tell Angular to check the access with our AuthGuard
-    loadChildren: 'app/pages/pages.module#PagesModule' 
+    loadChildren: 'app/pages/pages.module#PagesModule',
   },
   { path: 'auth', loadChildren: './auth/auth.module#NgxAuthModule' },
   // {
@@ -48,12 +51,33 @@ const routes: Routes = [
   //   ],
   // },
   // { path: '', redirectTo: 'pages', pathMatch: 'full' },
-  { path: '', loadChildren: 'app/pages/pages.module#PagesModule'},
+  // { path: '', loadChildren: 'app/pages/pages.module#PagesModule'},
   { path: '**', redirectTo: 'pages' },
 ];
 
+// const routes: Routes = [
+//   {
+//     path: 'dashboard',
+//     // component: DashboardComponent,
+//     loadChildren: 'app/pages/pages.module#PagesModule',
+//     canActivate: [AuthGuard],
+//   },
+//   { path: 'login', loadChildren: './auth/auth.module#NgxAuthModule' },
+//   // {
+//   //   path: 'auth',
+//   //   component: NbAuthComponent,
+//   //   children: [
+//   //     {
+//   //       path: 'login',
+//   //       component: NgxLoginComponent,
+//   //     },
+//   //   ],
+//   // },
+//   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
+// ];
+
 const config: ExtraOptions = {
-  useHash: true,
+  useHash: false,
 };
 
 @NgModule({

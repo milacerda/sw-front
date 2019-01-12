@@ -11,10 +11,12 @@ const routes: Routes = [{
   children: [{
     path: 'dashboard',
     component: DashboardComponent,
-  }, {
+  }, 
+  {
       path: 'edit/:id',
     loadChildren: './edit/edit.module#EditModule',
-  }, {
+  }, 
+  {
     path: 'ui-features',
     loadChildren: './ui-features/ui-features.module#UiFeaturesModule',
   }, {
@@ -29,15 +31,24 @@ const routes: Routes = [{
   }, {
     path: 'miscellaneous',
     loadChildren: './miscellaneous/miscellaneous.module#MiscellaneousModule',
-  }, {
+  },
+  {
     path: '',
     redirectTo: 'dashboard',
     pathMatch: 'full',
-  }, {
+  }, 
+  // {
+  //   path: 'dashboard/edit',
+  //   redirectTo: 'edit',
+  //   pathMatch: 'full',
+  // }, 
+  {
     path: '**',
     component: NotFoundComponent,
   }],
-}];
+},
+  
+];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
