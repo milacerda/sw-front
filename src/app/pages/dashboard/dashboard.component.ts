@@ -70,7 +70,7 @@ public getPlanets(){
   }
 
   public editPlanet(id){
-    this.router.navigate(['/dashboard/edit/'+id]);
+    this.router.navigate(['/edit/'+id]);
   }
 
   

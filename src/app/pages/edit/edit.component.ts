@@ -32,7 +32,7 @@ export class EditComponent implements OnInit {
         this.planetsService.getPlanet(id).subscribe(
             (data: Planets) => {
                 this.planet = data;
-                console.log(data);
+                // console.log(data);
             }
         );
     }

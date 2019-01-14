@@ -79,7 +79,7 @@ export class PlanetsService {
 
     public editPlanet(id, planet): Observable<Planets[]> {
 
-        return this.http.post<Planets[]>(URL_PLANETS+'/'+id, planet, httpOptions)
+        return this.http.put<Planets[]>(URL_PLANETS+'/'+id, planet, httpOptions)
             .pipe(
                 catchError(this.errorHandler)
             );

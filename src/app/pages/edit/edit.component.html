@@ -6,17 +6,17 @@
                 <form [formGroup]="planetsForm" (ngSubmit)="editPlanet()">
                     <div class="form-group">
                         <label for="nome">Nome</label>
-                        <input type="text" class="form-control" id="nome" placeholder="{{ planet ? planet.nome : '' }}" formControlName="nome"
-                            [class.input-danger]="!planetsForm.controls['nome'].valid && planetsForm.controls['nome']?.touched">
+                        <input type="text" class="form-control" id="nome" placeholder="{{ planet ? planet.nome : '' }}" [value]="planet ? planet.nome : '' " formControlName="nome"
+                            [class.input-danger]="planetsForm.controls['nome'].errors?.required && planetsForm.controls['nome'].touched">
                     </div>
                     <div class="form-group">
                         <label for="clima">Clima</label>
-                        <input type="text" class="form-control" id="clima" placeholder="{{ planet ? planet.clima : '' }}" formControlName="clima"
+                        <input type="text" class="form-control" id="clima" placeholder="{{ planet ? planet.clima : '' }}" [value]="planet ? planet.clima : ''" formControlName="clima"
                             [class.input-danger]="!planetsForm.controls['clima'].valid && planetsForm.controls['clima']?.touched">
                     </div>
                     <div class="form-group">
                         <label for="terreno">Terreno</label>
-                        <input type="text" class="form-control" id="terreno" placeholder="{{ planet ? planet.terreno : '' }}" formControlName="terreno"
+                        <input type="text" class="form-control" id="terreno" placeholder="{{ planet ? planet.terreno : '' }}" [value]="planet ? planet.terreno : ''" formControlName="terreno"
                             [class.input-danger]="!planetsForm.controls['terreno'].valid && planetsForm.controls['terreno']?.touched">
                     </div>
                     <button type="submit" class="btn btn-primary" [disabled]="(!planetsForm.valid && planetsForm?.touched) || onHold">Salvar</button>
